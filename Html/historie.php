@@ -4,6 +4,7 @@
         <title>SiteCom - Historie</title>
     </head>
     <body>
+      <?php include "../PHP/navbar.php" ?>
         <ul>
             <li>
               <div class="bullet">
