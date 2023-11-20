@@ -17,7 +17,30 @@
   --light: #FFF;
   --additional: #4c4897;
   --gray: #bbb;
+  --transparent: rgba(255, 255, 255, 0);
 }
+
+.gradient-overlay::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background: linear-gradient(to bottom, var(--transparent), var(--light));
+}
+
+        
+    
+        .image-container img {
+
+          width: 100%;
+          height: auto;
+          display: block;
+          filter: opacity(30%);
+        }
+    
+        
 
 
 
@@ -26,8 +49,6 @@ margin: 50px;
 }
 
 body {
-    background-image: url("../Images/IndexBackgroundImage.jpg");
-    background-color: var(--light);
   height: 400px;
   width: auto;
   background-position: center;
@@ -54,7 +75,6 @@ body {
    }
 
    h3{
-    margin-top:200px;
     margin-bottom: -420px;
     font-family: 'Jost', sans-serif;
     font-size:50px;
@@ -63,18 +83,21 @@ body {
 
    h1{
     text-align: center;
-    
-    font-size: 40px;
+    font-weight: 500;
+    font-size: 60px;
     font-family: 'Jost';
-    color:black;
+    color:var(--black);
    }
 
-   h4{
+   .welcome{
     text-align: center;
+    text-decoration: none;
     white-space: pre-line;
-    font-size: 20px;
-    font-family: 'Jost';
-    color:black;
+    font-size: 25px;
+    font-family: 'Jost', light;
+    font-weight: 300;
+    margin-top:-30px;
+    color:var(--black);
    }
 
    ep{
@@ -99,9 +122,9 @@ img {
   }
 
   .nav-links{
-    margin-left:40px;
+    margin-left:60px;
     margin-bottom: auto;
-    margin-top:auto;
+    margin-top:40px;
   }
 
 
@@ -114,10 +137,32 @@ img {
 
   }
 
+  .image-container {
+    overflow: hidden;
+    width: 102%;
+    margin-left: -20px;
+    margin-top: -20vh;
+    position: relative;
+    height: auto;
+    z-index: 1; /* Set a lower z-index */
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--dark);
+    text-align: center;
+    z-index: 2;
+  }
+  
   nav {
-    height: 100vh;
-    width: 70vw;
-    min-width: 600px;
+    position: relative;
+    z-index: 3;
+    height: 100px;
+    margin-top: -20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   }
 
   ul {
@@ -228,6 +273,9 @@ img {
 
 
   footer {
+    overflow: hidden;
+    width: 100%;
+    margin-left:-10px;
     background-color: var(--dark);
     color: var(--light);
     padding: 20px;

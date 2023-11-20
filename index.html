@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
     <!--/Fonty-->
 
     <!--CSS & JS-->
@@ -26,14 +27,15 @@
 <title>SiteCom</title>
 </head>
 <body>
+
   <div style="height:400px;">
-    <div style="height: 100px; margin-top:-20px; position:relative;
+    <div style="height: 100px; margin-top:-20px; position:relative; width:102%; margin-left:-20px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));"
     ><br>
     <nav>
       <div style="display: flex;">
-      <img src="assets/Images/Logo.png" alt="Logo" width="6%" height="auto">
-      <h5>|</h5>
+      <img src="assets/Images/Logo.png" alt="Logo" width="6%" max-height="auto" style="margin-top:20px;margin-left:20px">
+      <h5 style="margin-top:20px;margin-left:20px">|</h5>
       <div class="nav-links">
         <a href="#projekty">Naše projekty</a>
         <a href="#historie">Historie</a>
@@ -43,15 +45,20 @@
     </nav>
   
   </div>
-    
-    
-</div>
-<div style="margin-top: -200px">
-  <h1>Vítejte v SiteCom</h1>
-      <h4>Naše firma se věnuje profesionální tvorbě webových stránek na míru pro firmy i jednotlivce.
-      Pomáháme vám s weby již více než 3 roky</h4>
-</div>
-<br><br><br>   
+
+
+
+  <div class="image-container" >
+    <img src="assets/Images/IndexBackgroundImage.jpg">
+    <div class="overlay-text">
+      <h1>Vítejte v SiteCom</h1>
+      <h6 class="welcome" style="width:80vw">Naše firma se věnuje profesionální tvorbě webových stránek na míru pro firmy i jednotlivce.
+        Pomáháme vám s weby již více než 3 roky</h6>
+    </div>
+    <div class="gradient-overlay"></div>
+  </div>
+
+ 
 <h3 id="projekty">Naše projekty</h3>
 <br><br>
   <div class="container" style="margin-top:350px;">
@@ -113,7 +120,10 @@
                     <p>Budoucnost zaměřena na uspokojení zákazníků a expanzi do zahraničí. Společenská odpovědnost spočívá v publikování informací pro partnery, vývojáře a začínající firmy.</p>
                 </li>  
       </ul>
-      <br>
+      <br><br>
+    
+    
+    
       <footer>
         <div class="totally-a-row">
         <div class="footer-part">
