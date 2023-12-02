@@ -2,8 +2,7 @@
 
 /* TO DO:
 - fixed nav gradient
-- Sponzoři a ocenění
-- loga sponzorů
+- ocenění
 - Fix fonts, spacing, fix mobile / small view of web
 - Move styles into classes
 */
@@ -17,6 +16,9 @@
   --transparent: rgba(255, 255, 255, 0);
 }
 
+
+
+
 .gradient-overlay::after {
   content: "";
   position: absolute;
@@ -27,37 +29,82 @@
   background: linear-gradient(to bottom, var(--transparent), var(--light));
 }
 
-        
+.gradient{
+  height: 100px; margin-top:-20px; position:relative; width:110%; margin-left:-20px;
+    background: linear-gradient(to bottom, var(--light), var(--transparent));}
+
+    @media only screen and (max-width: 600px) {
+      .sponzor-div {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .sponzor {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    
     
         .image-container img {
-
           width: 100%;
           height: auto;
-          display: block;
           filter: opacity(30%);
         }
     
-        
+        .sponzor{
+          width: 80px;
+          height: auto;
+          display: block;
+          filter: opacity(100%);
+          margin: auto;
+        }
 
+        .divider{
+          margin-top:20px;margin-left:20px;font-weight: 100;
+        }
 
+        .sponzor-div{
+          background-color: var(--light);
+          border-radius: 10px;
+          height: auto;
+          max-width: 300px;
+          width:100%;
+          margin-left:auto;
+          margin-right:auto;
+          justify-content: space-between;
+          padding: 0px;
+        }
 
 .mujcarousel {
 margin: 50px;
 }
 
+
 body {
-  height: 400px;
-  width: auto;
+  margin: 0;
+  padding: 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Jost', sans-serif;
-   }
+}
 
-   h2{
+
+   h3{
     margin-top:60px;
     margin-bottom: -10px;
-    font-family: 'Jost', bold;
+    font-family: 'Jost', light;
+    font-size: 30px;
+    font-weight: 300;
+   }
+
+   h4{
+    margin-top:60px;
+    margin-bottom: -10px;
+    font-family: 'Jost', light;
+    font-size: 25px;
+    font-weight: 500;
    }
 
    h5{
@@ -71,9 +118,9 @@ body {
     color: var(--dark);
    }
 
-   h3{
-    margin-bottom: -420px;
+   h2{
     font-family: 'Jost', sans-serif;
+    font-weight: 500;
     font-size:50px;
     text-align: center;
    }
@@ -87,13 +134,13 @@ body {
    }
 
    .welcome{
+    width:80vw;
     text-align: center;
     text-decoration: none;
     white-space: pre-line;
     font-size: 25px;
     font-family: 'Jost', light;
     font-weight: 300;
-    margin-top:-30px;
     color:var(--black);
    }
 
@@ -104,8 +151,9 @@ body {
    p{
     display: block;
     white-space: pre-line;
-    font-size: 15px;
-    font-family: 'Jost';
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Jost', light;
     color:var(--dark);
    }
 
@@ -115,13 +163,13 @@ img {
 
   .background-image {
     max-width: 100%;
-    height: 100px;
   }
 
   .nav-links{
     margin-left:35px;
     margin-bottom: auto;
     margin-top:35px;
+    width: 100%;
   }
 
 
@@ -137,12 +185,13 @@ img {
   .image-container {
     overflow: hidden;
     width: 102%;
-    margin-left: -20px;
-    margin-top: -20vh;
+
     position: relative;
     height: auto;
     z-index: 1; /* Set a lower z-index */
   }
+
+  
   
   .overlay-text {
     position: absolute;
@@ -152,6 +201,27 @@ img {
     color: var(--dark);
     text-align: center;
     z-index: 2;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .overlay-text {
+    margin-top:140px;
+    margin-left: -48vw;
+    }
+    .image-container{
+      height: 70vh;
+      width: 200vw;
+    }
+
+    h1{
+      font-size: 10vw;
+    }
+    h6{
+      font-size:6vw;
+    }
+    a{
+      font-size:4vw;
+    }
   }
   
   nav {
@@ -164,7 +234,6 @@ img {
 
   ul {
     list-style-type: none;
-    margin-top: 400px;
     margin-right:20px;
   }
  
@@ -296,10 +365,18 @@ img {
       display: flex;
       justify-content: space-between;
       margin: 40px;
+      flex-wrap: wrap;
     }
 
     .rectangle-container {
-      flex: 0 0 30%;
+      flex: 0 0 calc(30% - 20px);
+    }
+
+
+    @media only screen and (max-width: 600px) {
+      .rectangle-container {
+        flex: 0 0 100%;
+      }
     }
 
     .rectangle {
