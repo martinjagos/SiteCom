@@ -120,7 +120,7 @@
 .slick-prev:before
 {
     content: '⯇'; /* Set the content to the left arrow */
-    font-size: 100px; /* Set the font size of the arrows */
+    font-size: 50px; /* Set the font size of the arrows */
     line-height: 100px;
     color: lightgray;
     margin-right: 20%;
@@ -128,7 +128,7 @@
 
 .slick-next:before {
     content: '⯈'; /* Set the content to the right arrow */
-    font-size: 100px; /* Set the font size of the arrows */
+    font-size: 50px; /* Set the font size of the arrows */
     line-height: 100px;
     color: lightgray;
     margin-left: 20%;
